@@ -16,8 +16,8 @@ const Nav = () => {
   }
 
   return (
-    <header className="absolute w-full px-8 py-8">
-      <nav className='flex justify-between items-center max-container'>
+    <header className="absolute w-full z-20 py-8">
+      <nav className='flex justify-between items-center max-container padding-x'>
         <a href="/">
           <img
             src={headerLogo}
@@ -37,7 +37,7 @@ const Nav = () => {
               </li>
             })
           }
-          <button className='bg-coral-red text-primary font-bold px-4 py-2 rounded-[10px]'>Explore</button>
+          <button className='bg-coral-red text-primary font-bold px-4 py-2 rounded-[10px] border-2 border-transparent hover:border-coral-red hover:text-coral-red hover:bg-white transition-all duration-300'>Explore</button>
         </ul>
         <div onClick={toggle} className='hidden max-lg:block'>
           <img
@@ -62,13 +62,13 @@ const Nav = () => {
                 return <li key={item.label}>
                   <a
                     href={item.href}
-                    className='font-montserrat leading-normal text-lg text-slate-gray hover:text-gray-800 cursor-pointer'
+                    className='font-montserrat leading-normal text-lg text-slate-gray hover:text-gray-800 cursor-pointer '
                   >
                     {item.label}</a>
                 </li>
               })
             }
-            <button className='bg-coral-red text-primary font-bold px-4 py-2 rounded-[10px] max-w-[120px]'>Explore</button>
+            <button className='bg-coral-red text-primary font-bold px-4 py-2 rounded-[10px] max-w-[120px] border-2 border-transparent hover:border-coral-red hover:text-coral-red hover:bg-white transition-all duration-300'>Explore</button>
           </ul>
         </div>
       </nav>
